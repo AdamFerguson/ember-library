@@ -23,7 +23,7 @@
           .form-group
             .col-sm-offset-2.col-sm-8
               .checkbox
-                =input name="completed" type="checkbox" value=completed
+                =input name="completed" type="checkbox" checked=completed
                 | Completed
         .modal-footer
           button.btn.btn-primary type="submit" style="float: right; margin-left: 10px;" Save changes

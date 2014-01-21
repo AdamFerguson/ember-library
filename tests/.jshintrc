@@ -38,7 +38,9 @@
     "wait",
     "keyEvent",
     "isolatedContainer",
-    "startApp"
+    "startApp",
+    "registerStore",
+    "TestStore"
   ],
   "node" : false,
   "browser" : false,
