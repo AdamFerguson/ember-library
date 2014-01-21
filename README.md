@@ -2,7 +2,7 @@
 
 An ember port of [backbone-library](https://github.com/vernonk/backbone-library)
 
-## To run application
+## To run the application
 
 1. git clone git@github.com:AdamFerguson/ember-library.git
 2. cd ember-library
