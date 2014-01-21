@@ -1,12 +1,12 @@
 ul.nav.nav-pills
-  li.active
-    a href="#/" All
-  li
-    a href="#/reading" Reading
-  li
-    a href="#/completed" Completed
+  li{bind-attr class="isAll:active"}
+    a click="applyCompletedFilter 'all'" All
+  li{bind-attr class="isReading:active"}
+    a click="applyCompletedFilter 'reading'" Reading
+  li{bind-attr class="isCompleted:active"}
+    a click="applyCompletedFilter 'completed'" Completed
 .row.book-list
-  = each savedBooks
+  = each filteredBooks
     .col-sm-6.col-md-4
       .thumbnail
         img{bind-attr src="imgURL"} alt="Cover"
@@ -16,7 +16,7 @@ ul.nav.nav-pills
           | by {{author}}
         p
           strong Completed:
-          a click="toggleComplete"
+          a click="toggleComplete this"
             if completed
               | Yes
             else

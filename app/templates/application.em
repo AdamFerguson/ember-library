@@ -7,7 +7,7 @@
         li.active
           link-to "books" | Home
         li
-          a click="addBook" Add a book
+          a click="addBookModal" Add a book
   = outlet 'modal'
 
   = outlet

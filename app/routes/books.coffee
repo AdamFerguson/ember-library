@@ -3,7 +3,7 @@ route = Ember.Route.extend(
     @store.find('book')
 
   actions: {
-    addBook: ->
+    addBookModal: ->
       newBook = @store.createRecord('book')
       @controllerFor('addBook').set('model', newBook)
       @render('addBook', {
@@ -16,6 +16,7 @@ route = Ember.Route.extend(
       book.destroyRecord()
 
   }
+
 )
 
 `export default route`
