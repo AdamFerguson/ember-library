@@ -8,6 +8,8 @@
           link-to "books" | Home
         li
           a click="addBookModal" Add a book
-  = outlet 'modal'
 
   = outlet
+
+  render 'bsAddBook'
+  /= outlet 'modal'

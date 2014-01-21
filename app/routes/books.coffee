@@ -6,11 +6,12 @@ route = Ember.Route.extend(
     addBookModal: ->
       newBook = @store.createRecord('book')
       @controllerFor('addBook').set('model', newBook)
-      @render('addBook', {
-        into: 'application'        
-        outlet: 'modal'
-        controller: 'addBook'
-      })
+      #@render('bsAddBook', {
+      #  into: 'application'        
+      #  outlet: 'modal'
+      #  controller: 'addBook'
+      #})
+      Bootstrap.ModalManager.show('addBookModal')
 
     removeBook: (book) ->
       book.destroyRecord()
@@ -18,11 +19,11 @@ route = Ember.Route.extend(
     saveBook: (book) ->
       book.save()
 
-    hideModal: ->
-      @disconnectOutlet(
-        outlet:     'modal'
-        parentView: 'application'
-      )
+    #hideModal: ->
+    #  @disconnectOutlet(
+    #    outlet:     'modal'
+    #    parentView: 'application'
+    #  )
   }
 
 )
