@@ -15,6 +15,14 @@ route = Ember.Route.extend(
     removeBook: (book) ->
       book.destroyRecord()
 
+    saveBook: (book) ->
+      book.save()
+
+    hideModal: ->
+      @disconnectOutlet(
+        outlet:     'modal'
+        parentView: 'application'
+      )
   }
 
 )

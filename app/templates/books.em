@@ -9,7 +9,7 @@ ul.nav.nav-pills
   = each filteredBooks
     .col-sm-6.col-md-4
       .thumbnail
-        img{bind-attr src="imgURL"} alt="Cover"
+        img{bind-attr src="imgURL"} alt="Cover" onerror="this.src='/images/books/placeholder.gif'"
         p
           strong= title
           br

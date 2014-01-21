@@ -1,12 +1,14 @@
+/* globals module */
+
 module.exports = function(server) {
 
-  // Create an API namespace, so that the root does not 
+  // Create an API namespace, so that the root does not
   // have to be repeated for each end point.
-	server.namespace('/api', function() {
+  server.namespace('/api', function() {
 
-		// Return fixture data for '/api/posts/:id'
-		server.get('/books', function(req, res) {
-      books = {
+    // Return fixture data for '/api/posts/:id'
+    server.get('/books', function(req, res) {
+      var books = {
         "books": [
           {
             "id": 1,
@@ -51,11 +53,11 @@ module.exports = function(server) {
             "completed": true
           }
         ]
-      }
+      };
 
-			res.send(books);
-		});
+      res.send(books);
+    });
 
-	});
+  });
 
 };
