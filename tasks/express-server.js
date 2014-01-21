@@ -106,6 +106,8 @@ module.exports = function(grunt) {
         // Is it a directory? If so, search for an index.html in it.
         if (stats.isDirectory()) { filePath = path.join(filePath, 'index.html'); }
 
+        // Instruct the browser to cache it
+        res.setHeader("Cache-Control", "public, max-age=345600");
         // Serve the file
         res.sendfile(filePath, function(err) {
           if (err) { next(); return; }
