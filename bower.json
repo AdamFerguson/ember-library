@@ -11,7 +11,7 @@
     "ember-testing-httpRespond": "~0.1.1",
     "emblem.js": "~0.3.11",
     "bootstrap": "~3.0.3",
-    "ember-localstorage-adapter": "~0.2.0"
+    "ember-localstorage-adapter": "git://github.com/rpflorence/ember-localstorage-adapter.git#master"
   },
   "resolutions": {
     "ember": "~1.4.0-beta.2"
