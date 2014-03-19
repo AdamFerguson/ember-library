@@ -18,6 +18,7 @@ controller = Ember.ArrayController.extend(
   actions: {
     toggleComplete: (book) ->
       book.toggleProperty('completed')
+      book.save()
       false # prevent action bubbling
 
     applyCompletedFilter: (filter) ->
