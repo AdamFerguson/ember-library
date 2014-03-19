@@ -18,6 +18,7 @@
 .thumbnail img {
   float: right;
   margin: 10px;
+  max-height: 110px;
 }
 .thumbnail .destroy {
   display: block;
